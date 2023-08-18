@@ -14,7 +14,7 @@ const Results = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://127.0.0.1:5000/getRiskFactor?submissionID=${id}`
+          `http://3.95.34.166:9999/getRiskFactor?submissionID=${id}`
         );
 
         if (isMounted) {
@@ -47,7 +47,8 @@ const Results = () => {
         data && (
           <div className="bg-gray-200 rounded-lg py-10 px-6 shadow-xl">
             <h1 className="text-2xl font-semibold">
-              Risk factor for Alzheimer's disease is: {Number(data.riskFactor).toFixed(2)}
+              Risk factor for Alzheimer's disease is:{" "}
+              {Number(data.riskFactor).toFixed(2)}%
             </h1>
           </div>
         )
