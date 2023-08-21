@@ -47,7 +47,8 @@ const Results = () => {
         data && (
           <div className="bg-gray-200 rounded-lg py-10 px-6 shadow-xl">
             <h1 className="text-2xl font-semibold">
-              Risk factor for Alzheimer's disease is:{" "}
+              Based on the provided demographic data, habits, and medical
+              conditions, your chance of developing Alzheimer disease is:
               {Number(data.riskFactor).toFixed(2)}%
             </h1>
           </div>
