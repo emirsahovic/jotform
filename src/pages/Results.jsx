@@ -14,7 +14,7 @@ const Results = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://192.168.50.87:5000/getRiskFactor?submissionID=${id}`
+          `http://3.95.34.166:9999/getRiskFactor?submissionID=${id}`
         );
 
         if (isMounted) {
@@ -46,9 +46,9 @@ const Results = () => {
       ) : (
         data && (
           <div className="bg-gray-200 rounded-lg py-10 px-6 shadow-xl">
-            <h1 className="text-2xl font-semibold">
+            <h1 className="text-2xl font-semibold max-w-xl">
               Based on the provided demographic data, habits, and medical
-              conditions, your chance of developing Alzheimer disease is:
+              conditions, your chance of developing Alzheimer disease is:{" "}
               {Number(data.riskFactor).toFixed(2)}%
             </h1>
           </div>
