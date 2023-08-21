@@ -14,7 +14,7 @@ const Results = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://3.95.34.166:9999/getRiskFactor?submissionID=${id}`
+          `http://192.168.50.87:5000/getRiskFactor?submissionID=${id}`
         );
 
         if (isMounted) {
